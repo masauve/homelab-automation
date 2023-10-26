@@ -7,7 +7,7 @@
         port: 5001
   rules:
     - name: "Run job template - block port"
-      condition: {}
+      condition: fact.ansible_os_family == "linux"
       action:
         run_job_template:
           name: homelab - block firewall port
