@@ -7,7 +7,7 @@
         port: 5001
   rules:
     - name: "Run job template - block port"
-      condition: event.payload.status == "enabled"
+      condition: {}
       action:
         run_job_template:
           name: homelab - block firewall port
