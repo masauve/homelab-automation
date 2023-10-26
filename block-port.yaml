@@ -1,0 +1,7 @@
+- name: Block OCP API
+  hosts: proxy.myocp.net
+  vars: 
+     api_port_desired_state: disabled
+  roles:
+    - {role: config-firewall}
+

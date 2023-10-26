@@ -1,0 +1,7 @@
+- name: configure inbound connections on port 6443
+  ansible.posix.firewalld:
+     port: 6443/tcp
+     permanent: true
+     immediate: true
+     state: "{{ api_port_desired_state }}"
+  become: true   

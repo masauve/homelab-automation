@@ -1,0 +1,2 @@
+[home-lab]
+proxy.myocp.net ansible_ssh_private_key_file=/Users/msauve/.ssh/id_rsa_proxy ansible_ssh_user=martinsauve
