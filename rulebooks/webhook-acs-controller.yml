@@ -10,7 +10,6 @@
       condition: 
          all: 
            - event.payload.alert.clusterName == "sno1"
-           - event.payload.alert.policy.name is search("Exec into Pod")
       action:
         run_job_template:
           name: homelab - block firewall port
