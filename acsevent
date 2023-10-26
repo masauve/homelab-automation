@@ -1,0 +1,166 @@
+{'event': {'meta': {'endpoint': 'endpoint',
+                                  'headers': {'Accept-Encoding': 'gzip',
+                                              'Content-Length': '3366',
+                                              'Content-Type': 'application/json',
+                                              'Forwarded': 'for=192.168.50.224;host=webhook-aap.apps.home.myocp.net;proto=https',
+                                              'Host': 'webhook-aap.apps.home.myocp.net',
+                                              'User-Agent': 'Go-http-client/1.1',
+                                              'X-Forwarded-For': '192.168.50.224',
+                                              'X-Forwarded-Host': 'webhook-aap.apps.home.myocp.net',
+                                              'X-Forwarded-Proto': 'https',
+                                              'x-forwarded-port': '443'},
+                                  'received_at': '2023-10-26T17:18:46.627622Z',
+                                  'source': {'name': 'ansible.eda.webhook',
+                                             'type': 'ansible.eda.webhook'},
+                                  'uuid': '64c1193c-dbc5-4d45-a751-8ca2bce6936b'},
+                         'payload': {'alert': {'clusterId': '4593cffe-726d-49b4-af7a-9e10f0be1b99',
+                                               'clusterName': 'sno1',
+                                               'deployment': {'clusterId': '4593cffe-726d-49b4-af7a-9e10f0be1b99',
+                                                              'clusterName': 'sno1',
+                                                              'containers': [{'image': {'id': 'sha256:2a26274db7008b0c6537ba58a2ab84b0ddaa1a1d44073b275d41932a46637d7d',
+                                                                                        'name': {'fullName': 'registry.redhat.io/ansible-automation-platform-24/eda-controller-rhel8@sha256:2a26274db7008b0c6537ba58a2ab84b0ddaa1a1d44073b275d41932a46637d7d',
+                                                                                                 'registry': 'registry.redhat.io',
+                                                                                                 'remote': 'ansible-automation-platform-24/eda-controller-rhel8'}},
+                                                                              'name': 'eda-worker'}],
+                                                              'id': '14ea8f71-86d8-4e2c-a2b1-ea72d88f994f',
+                                                              'labels': {'app.kubernetes.io/component': 'eda-worker',
+                                                                         'app.kubernetes.io/managed-by': 'eda-operator',
+                                                                         'app.kubernetes.io/name': 'eda-1',
+                                                                         'app.kubernetes.io/operator-version': '2.4',
+                                                                         'app.kubernetes.io/part-of': 'eda-1',
+                                                                         'app.kubernetes.io/version': '2a26274db7008b0c6537ba58a2ab84b0ddaa1a1d44073b275d41932a46637d7'},
+                                                              'name': 'eda-1-worker',
+                                                              'namespace': 'aap',
+                                                              'namespaceId': '67c6fa1c-d605-4d2d-9b58-a79159ddd2c0',
+                                                              'type': 'Deployment'},
+                                               'firstOccurred': '2023-10-26T17:18:46.595261533Z',
+                                               'id': '0573790f-ab9b-46db-ae26-9186e93525cb',
+                                               'lifecycleStage': 'RUNTIME',
+                                               'namespace': 'aap',
+                                               'namespaceId': '67c6fa1c-d605-4d2d-9b58-a79159ddd2c0',
+                                               'policy': {'SORTLifecycleStage': 'RUNTIME',
+                                                          'SORTName': 'Kubernetes '
+                                                                      'Actions: '
+                                                                      'Exec '
+                                                                      'into '
+                                                                      'Pod',
+                                                          'categories': ['Kubernetes '
+                                                                         'Events'],
+                                                          'criteriaLocked': True,
+                                                          'description': 'Alerts '
+                                                                         'when '
+                                                                         'Kubernetes '
+                                                                         'API '
+                                                                         'receives '
+                                                                         'request '
+                                                                         'to '
+                                                                         'execute '
+                                                                         'command '
+                                                                         'in '
+                                                                         'container',
+                                                          'eventSource': 'DEPLOYMENT_EVENT',
+                                                          'exclusions': [{'deployment': {'name': 'thanos-querier',
+                                                                                         'scope': {'namespace': 'openshift-monitoring'}}},
+                                                                         {'deployment': {'name': 'prometheus-k8s',
+                                                                                         'scope': {'namespace': 'openshift-monitoring'}}},
+                                                                         {'deployment': {'name': 'ovnkube-node',
+                                                                                         'scope': {'namespace': 'openshift-ovn-kubernetes'}}},
+                                                                         {'deployment': {'name': 'etcd-ci-ln-.*-master-\\d+',
+                                                                                         'scope': {'namespace': 'openshift-etcd'}}}],
+                                                          'id': '8ab0f199-4904-4808-9461-3501da1d1b77',
+                                                          'isDefault': True,
+                                                          'lastUpdated': '2023-10-26T16:06:35.202680476Z',
+                                                          'lifecycleStages': ['RUNTIME'],
+                                                          'mitreAttackVectors': [{'tactic': 'TA0002',
+                                                                                  'techniques': ['T1609']},
+                                                                                 {'tactic': 'TA0002',
+                                                                                  'techniques': ['T1059.004']}],
+                                                          'mitreVectorsLocked': True,
+                                                          'name': 'Kubernetes '
+                                                                  'Actions: '
+                                                                  'Exec into '
+                                                                  'Pod',
+                                                          'notifiers': ['64329616-81e3-43ec-a89d-3875add17db7'],
+                                                          'policySections': [{'policyGroups': [{'fieldName': 'Kubernetes '
+                                                                                                             'Resource',
+                                                                                                'values': [{'value': 'PODS_EXEC'}]}]}],
+                                                          'policyVersion': '1.1',
+                                                          'rationale': "'pods/exec' "
+                                                                       'is '
+                                                                       'non-standard '
+                                                                       'approach '
+                                                                       'for '
+                                                                       'interacting '
+                                                                       'with '
+                                                                       'containers. '
+                                                                       'Attackers '
+                                                                       'with '
+                                                                       'permissions '
+                                                                       'could '
+                                                                       'execute '
+                                                                       'malicious '
+                                                                       'code '
+                                                                       'and '
+                                                                       'compromise '
+                                                                       'resources '
+                                                                       'within '
+                                                                       'a '
+                                                                       'cluster',
+                                                          'remediation': 'Restrict '
+                                                                         'RBAC '
+                                                                         'access '
+                                                                         'to '
+                                                                         'the '
+                                                                         "'pods/exec' "
+                                                                         'resource '
+                                                                         'according '
+                                                                         'to '
+                                                                         'the '
+                                                                         'Principle '
+                                                                         'of '
+                                                                         'Least '
+                                                                         'Privilege. '
+                                                                         'Limit '
+                                                                         'such '
+                                                                         'usage '
+                                                                         'only '
+                                                                         'to '
+                                                                         'development, '
+                                                                         'testing '
+                                                                         'or '
+                                                                         'debugging '
+                                                                         '(non-production) '
+                                                                         'activities',
+                                                          'severity': 'HIGH_SEVERITY'},
+                                               'time': '2023-10-26T17:18:46.595261533Z',
+                                               'violations': [{'keyValueAttrs': {'attrs': [{'key': 'pod',
+                                                                                            'value': 'eda-1-worker-6dd558bd75-j99p2'},
+                                                                                           {'key': 'container',
+                                                                                            'value': 'eda-worker'},
+                                                                                           {'key': 'commands',
+                                                                                            'value': '/bin/sh '
+                                                                                                     '-c '
+                                                                                                     'TERM="xterm-256color" '
+                                                                                                     '/bin/sh'},
+                                                                                           {'key': 'Username',
+                                                                                            'value': 'xxx@xxx.com'},
+                                                                                           {'key': 'Groups',
+                                                                                            'value': 'cluster-admins, '
+                                                                                                     'system:authenticated:oauth, '
+                                                                                                     'system:authenticated'}]},
+                                                               'message': 'Kubernetes '
+                                                                          'API '
+                                                                          'received '
+                                                                          'exec '
+                                                                          "'/bin/sh "
+                                                                          '-c '
+                                                                          'TERM="xterm-256color" '
+                                                                          "/bin/sh' "
+                                                                          'request '
+                                                                          'into '
+                                                                          'pod '
+                                                                          "'eda-1-worker-6dd558bd75-j99p2' "
+                                                                          'container '
+                                                                          "'eda-worker'",
+                                                               'time': '2023-10-26T17:18:46.595105569Z',
+                                                               'type': 'K8S_EVENT'}]}}}}}
