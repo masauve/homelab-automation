@@ -1,5 +1,4 @@
 {
-    "payload": {
       "alert": {
         "id": "0573790f-ab9b-46db-ae26-9186e93525cb",
         "time": "2023-10-26T17:24:03.153146929Z",
@@ -186,6 +185,5 @@
         "namespaceId": "67c6fa1c-d605-4d2d-9b58-a79159ddd2c0",
         "firstOccurred": "2023-10-26T17:18:46.595261533Z",
         "lifecycleStage": "RUNTIME"
-      }
-    }
+      } 
   }
